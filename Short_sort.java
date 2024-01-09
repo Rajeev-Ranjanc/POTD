@@ -15,35 +15,33 @@ public class Short_sort {
 //cba
     public static void main(String[] args) {
         Scanner sc = new Scanner ( System.in );
+        char[] valid = {'a','b','c'};
+        //getting input of the size of the array
         int n = sc.nextInt ();
+        sc.nextLine ();
+        //getting input of the string array
         String[] str = new String[n];
-        for (int j = 0; j < n; j++) {
-            str[j] = sc.nextLine ();
+        for (int i = 0; i < n; i++) {
+            str[i] = sc.nextLine ();
         }
-
-        String valid ="abc";
-
-       for(int k=0;k<n;k++){
-           int count =0;
-
-           for (int i = 0; i < str[0].length (); i++) {
-
-               if(str[i].charAt ( i )!=valid.charAt ( i )){
-                   count++;
-               }
-               if(count%2==0){
-                   System.out.println ("YES");
-               }
-               else {
-                   System.out.println ("NO");
-               }
-           }
-       }
-
-
+        //solving approach->if no of displaced no of elements is even from the original string then "YES" otherwise "NO"
+        for (int i = 0; i < n; i++) {
+//            System.out.println (str[i]);
+            char[] comp = str[i].toCharArray ();
+            int count = 0;
+            for (int j=0;j<comp.length;j++){
+                if(comp[j] != valid[j]){
+                    count++;
+                }
+            }
+            if(count%2==0){
+                System.out.println ("YES");
+            }
+            else {
+                System.out.println ("NO");
+            }
+        }
     }
-
-
 }
 
 
