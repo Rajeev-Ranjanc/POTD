@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/binary-search/submissions/1159441202/
 //Day 28
-/*
+/*Done
 Simply binary search I have to return the index of the target elements of the array if the elements is present int the array
 otherwise return -1
  */
