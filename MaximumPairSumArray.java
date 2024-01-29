@@ -10,24 +10,25 @@ Pairing-> pair is to be created after sorting of the array first and last elemen
 //day 16
 public class MaximumPairSumArray {
     public static void main(String[] args) {
-       int[] nums = {3,5,4,2,4,6};
-        System.out.println (minPairSum ( nums ));
+        int[] nums = {3, 5, 4, 2, 4, 6};
+        System.out.println(minPairSum(nums));
     }
+
     public static int minPairSum(int[] nums) {
         //first of all sort the array
-        Arrays.sort ( nums );
+        Arrays.sort(nums);
 
         //for pairing the element we have to define two variable start and end and initialise as well
         int start = 0;
-        int end = nums.length-1;
-        int maxPairSum= Integer.MIN_VALUE;
+        int end = nums.length - 1;
+        int maxPairSum = Integer.MIN_VALUE;
 
-        while (start<end){
+        while (start < end) {
             int currentsum = nums[start] + nums[end];
-            maxPairSum = Math.max ( maxPairSum , currentsum );
+            maxPairSum = Math.max(maxPairSum, currentsum);
             start++;
             end--;
         }
-return maxPairSum;
+        return maxPairSum;
     }
 }

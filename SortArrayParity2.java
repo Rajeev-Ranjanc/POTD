@@ -1,5 +1,8 @@
 //https://leetcode.com/problems/sort-array-by-parity-ii/
-
+/*
+I have created two list even and odd even list contain even number & odd list contain odd number,
+and later I merged both the list
+ */
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,6 +33,7 @@ public class SortArrayParity2 {
             }
         }
         return result;
+
 }
 
 }

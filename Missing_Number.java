@@ -1,11 +1,12 @@
 //https://leetcode.com/problems/missing-number/
 public class Missing_Number {
     public static void main(String[] args) {
-        int[] nums = {9,6,4,2,3,5,7,0,1};
+        int[] nums = {9, 6, 4, 2, 3, 5, 7, 0, 1};
         int n = nums.length;
-        System.out.println (missingNumber ( nums , n ));
+        System.out.println(missingNumber(nums, n));
     }
-    public static int missingNumber(int[] nums , int n) {
+
+    public static int missingNumber(int[] nums, int n) {
         //there is number from [0,N] that's why i can apply sum of natural number
         //but not a good practice
 
@@ -25,7 +26,7 @@ public class Missing_Number {
         while (i < nums.length) {
             int correctIndex = nums[i];
             if (nums[i] < nums.length && nums[i] != nums[correctIndex]) {
-                swaps ( nums, i, correctIndex );
+                swaps(nums, i, correctIndex);
             } else {
                 i++;
             }
